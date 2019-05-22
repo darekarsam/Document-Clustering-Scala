@@ -16,7 +16,18 @@ https://en.wikipedia.org/wiki/History_of_modern_Greece
 https://en.wikipedia.org/wiki/History_of_Greece
 https://en.wikipedia.org/wiki/Lake_Michigan
     
-## Web Page cleaning process:
-I have used the jsoup library to clean the web pages and got the text from the body tags.
-Removed all the punctuations and non ASCII characters(Still mode could have been done)
-Tokenized the text by seperating with space
+## Web Page to Feature Vector(using Hashing trick and Normalization):
+I have used the jsoup library to clean the web pages and got the text from the body tags.    
+Removed all the punctuations and non ASCII characters(Still mode could have been done).   
+Tokenized the text by seperating with space.     
+Removed stop words by using a predefined list of stopwords.    
+I fixed the length of feature vector to 5000, for every token I got the hash and took the mod value divided by vector length and determined the index in feature vector.    
+Complex collision handling code could have been written to handle collisions in a better way.    
+Normalized the Feature vector by dividing by the magnitude and getting the unit vector.    
+
+## KMeans clustering steps     
+Steps:    
+1. Choose k(Number of Clusters=3) Random vectors as Centroids, set tolerance level tol=0.0003(in this case) and max iterations maxIter=100     
+2. Assign each data point to cluster whose distance is minimum among all centroids of the 3 clusters      
+2. re-calculate centroids by sum of all points in a cluster Ci/number of points in a cluster Ci      
+3. repeat step 2 and 3 until convergence      
