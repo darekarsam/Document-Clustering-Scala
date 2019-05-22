@@ -31,3 +31,6 @@ Steps:
 2. Assign each data point to cluster whose distance is minimum among all centroids of the 3 clusters      
 2. re-calculate centroids by sum of all points in a cluster Ci/number of points in a cluster Ci      
 3. repeat step 2 and 3 until convergence      
+
+
+![Image description](https://github.com/darekarsam/Document-Clustering-Scala/blob/master/KMeans%20Clustering%20Results.png)
