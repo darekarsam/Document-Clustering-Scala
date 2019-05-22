@@ -19,7 +19,7 @@ https://en.wikipedia.org/wiki/Lake_Michigan
 ## Web Page to Feature Vector(using Hashing trick and Normalization):
 I have used the jsoup library to clean the web pages and got the text from the body tags.    
 Removed all the punctuations and non ASCII characters(Still mode could have been done).   
-Tokenized the text by seperating with space.     
+Tokenized the text by seperating with space, Used only 1-grams however a complex and better solution could have been made using 2grams and 3grams.     
 Removed stop words by using a predefined list of stopwords.    
 I fixed the length of feature vector to 5000, for every token I got the hash and took the mod value divided by vector length and determined the index in feature vector.    
 Complex collision handling code could have been written to handle collisions in a better way.    
@@ -33,4 +33,9 @@ Steps:
 3. repeat step 2 and 3 until convergence      
 
 
-![Image description](https://github.com/darekarsam/Document-Clustering-Scala/blob/master/KMeans%20Clustering%20Results.png)
+## Results     
+![Results](https://github.com/darekarsam/Document-Clustering-Scala/blob/master/KMeans%20Clustering%20Results.png)
+
+Here we see that cluster 0 belongs to greek history documents and wiki document on Greece.    
+cluster 1 belongs to Wiki pages of lakes.    
+cluster 2 belongs to wiki documents related to machine learning.
